@@ -1,0 +1,55 @@
+@mixin top {
+    height: 60px;
+    border-bottom: 1px solid rgba(35, 47, 124, 0.54);
+    background: gray;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin btnStyle-3($color, $bg, $bt) {
+    color: $color;
+    background: $bg;
+    border-top: $bt;
+}
+
+@mixin btnStyle-4($color, $bg, $bt, $bb) {
+    @include btnStyle-3($color, $bg, $bt);
+    border-bottom: $bb;
+}
+
+@mixin btnSize($fz, $lh, $w, $bdrad) {
+    font-size: $fz;
+    line-height: $lh;
+    width: $w;
+    border-radius: $bdrad;
+}
+
+@mixin btn__secondary {
+    color: #8f5757;
+    background: rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+@mixin btn {
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+@mixin item__content {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    padding: 24px 0 30px;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+/*mixins con funcionamiento momentaneo*/
